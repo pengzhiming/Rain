@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.zm.msg">
+
+    <application>
+        <activity android:name=".debug.DebugMsgActivity"
+            android:screenOrientation="portrait"></activity>
+    </application>
+
+</manifest>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.zm.mine">
+
+    <application>
+        <activity android:name="com.zm.mine.debug.DebugMineActivity"
+            android:screenOrientation="portrait"></activity>
+    </application>
+
+</manifest>

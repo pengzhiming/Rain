@@ -1,1 +1,7 @@
-include ':app', ':module_common'
+include ':app',
+        ':common_res',
+        ':module_common',
+        ':module_home',
+        ':module_mall',
+        ':module_mine',
+        ':module_msg'
