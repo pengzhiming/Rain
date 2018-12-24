@@ -5,3 +5,6 @@
 build/
 app/build/
 local.properties
+
+# module_common
+module_common/build/
