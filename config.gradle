@@ -1,0 +1,48 @@
+/**
+ * 项目配置
+ */
+ext {
+    // android版本配置
+    android= [
+            compileSdkVersion:  27,
+            buildToolsVersion:  "27.0.3",
+            applicationId    :  "com.zm.rain",
+            minSdkVersion    :  15,
+            targetSdkVersion :  27,
+            versionCode      :  1,
+            versionName      :  "1.0,0",
+    ]
+    // version配置
+    version = [
+            androidSupportSdkVersion: "27.1.1",
+            retrofitSdkVersion      : "2.3.0",
+            glideSdkVersion         : "4.8.0",
+            rxJava                  : "2.1.5",
+            rxAndroid               : "2.0.1"
+    ]
+    //support配置
+    supportDeps = [
+            supportv4                   : "com.android.support:support-v4:$version.androidSupportSdkVersion",
+            appcompatv7                 : "com.android.support:appcompat-v7:$version.androidSupportSdkVersion",
+            cardview                    : "com.android.support:cardview-v7:$version.androidSupportSdkVersion",
+            design                      : "com.android.support:design:$version.androidSupportSdkVersion",
+            annotations                 : "com.android.support:support-annotations:$version.androidSupportSdkVersion"
+    ]
+    // 依赖第三方配置
+    dependencies = [
+                retrofit                : "com.squareup.retrofit2:retrofit:$version.retrofitSdkVersion",
+                retrofitConverterGson   : "com.squareup.retrofit2:converter-gson:$version.retrofitSdkVersion",
+                retrofitAdapterRxjava2  : "com.squareup.retrofit2:adapter-rxjava2:$version.retrofitSdkVersion",
+                okhttp3LoggerInterceptor: "com.squareup.okhttp3:logging-interceptor:3.4.1",
+                rxJava                  : "io.reactivex.rxjava2:rxjava:$version.rxJava",
+                rxAndroid               : "io.reactivex.rxjava2:rxandroid:$version.rxAndroid",
+                glide                   : "com.github.bumptech.glide:glide:$version.glideSdkVersion"
+    ]
+    // other
+    glideOkhttp = "com.github.bumptech.glide:okhttp3-integration:$version.glideSdkVersion"
+    // APT
+    glideCompiler = "com.github.bumptech.glide:compiler:$version.glideSdkVersion"
+
+    supportLibs = supportDeps.values()
+    otherLibs = dependencies.values()
+}

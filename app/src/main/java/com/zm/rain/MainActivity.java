@@ -1,4 +1,4 @@
-package com.zm.rain.mvvmkotlin;
+package com.zm.rain;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
