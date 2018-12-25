@@ -28,8 +28,11 @@ android {
 
 dependencies {
     api fileTree(dir: 'libs', include: ['*.jar'])
-    // Support库
-    api rootProject.ext.supportLibs
+    //公用的support相关库在base中依赖
+    api rootProject.ext.support['appcompatv7']
+    api rootProject.ext.support['design']
     // 公用资源在base中依赖
     api project(':common_res')
+    // 阿里路由框架
+    api rootProject.ext.dependencies["arouter-api"]
 }

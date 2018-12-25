@@ -2,9 +2,4 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.zm.msg">
 
-    <application>
-        <activity android:name=".debug.DebugMsgActivity"
-            android:screenOrientation="portrait"></activity>
-    </application>
-
 </manifest>

@@ -19,5 +19,19 @@ android {
 }
 
 dependencies {
-    implementation project(':module_common')
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    // 宿主项目中判断组件是否需要独立运行
+    if (isBuildModule) {
+        // 宿主独立运行时，宿主项目直接依赖基础库，避免编译错误
+        implementation project(':module_common')
+    }else {
+        // 首页模块
+        implementation project(':module_home')
+        // 商城模块
+        implementation project(':module_mall')
+        // 消息模块
+        implementation project(':module_msg')
+        // 用户模块
+        implementation project(':module_mine')
+    }
 }
