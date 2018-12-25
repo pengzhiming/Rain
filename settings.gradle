@@ -4,4 +4,5 @@ include ':app',
         ':module_home',
         ':module_mall',
         ':module_mine',
-        ':module_msg'
+        ':module_msg',
+        ':module_main'

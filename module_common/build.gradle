@@ -1,4 +1,5 @@
 apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
 
 android {
     compileSdkVersion rootProject.ext.android.compileSdkVersion
@@ -18,6 +19,10 @@ android {
     }
 
     buildTypes {
+        debug {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
@@ -28,11 +33,13 @@ android {
 
 dependencies {
     api fileTree(dir: 'libs', include: ['*.jar'])
+    //kotlin 支持库
+    api "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
     //公用的support相关库在base中依赖
     api rootProject.ext.support['appcompatv7']
     api rootProject.ext.support['design']
     // 公用资源在base中依赖
     api project(':common_res')
     // 阿里路由框架
-    api rootProject.ext.dependencies["arouter-api"]
+    api rootProject.ext.dependencies['arouter-api']
 }
