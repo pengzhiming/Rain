@@ -28,16 +28,49 @@ android {
         }
     }
 
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+            if (isBuildModule.toBoolean()) {
+                //独立运行
+                manifest.srcFile 'src/main/alone/AndroidManifest.xml'
+            } else {
+                //合并到宿主
+                manifest.srcFile 'src/main/AndroidManifest.xml'
+            }
+        }
+    }
+    //统一资源前缀，规范资源引用
+    resourcePrefix "app_"
+
     compileOptions {
         targetCompatibility JavaVersion.VERSION_1_8
         sourceCompatibility JavaVersion.VERSION_1_8
+    }
+
+    configurations.all {
+        //循环一个个的依赖库
+        resolutionStrategy.eachDependency { DependencyResolveDetails details ->
+            //获取当前循环到的依赖库
+            def requested = details.requested
+            //如果这个依赖库群组的名字是com.android.support
+            if (requested.group == 'com.android.support') {
+                //且其名字不是以multidex开头的
+                if (!requested.name.startsWith("multidex")) {
+                    //这里指定需要统一的依赖版本
+                    details.useVersion rootProject.ext.version.androidSupportSdkVersion
+                }
+            }
+        }
     }
 }
 
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
+    //kotlin 支持库
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
     // 宿主项目中判断组件是否需要独立运行
-    if (isBuildModule) {
+    if (isBuildModule.toBoolean()) {
         // 宿主独立运行时，宿主项目直接依赖基础库，避免编译错误
         implementation project(':module_common')
     }else {

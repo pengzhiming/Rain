@@ -2,8 +2,4 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.zm.main">
 
-    <application>
-        <activity android:name="com.zm.main.module.MainActivity"
-            android:screenOrientation="portrait"/>
-    </application>
 </manifest>
