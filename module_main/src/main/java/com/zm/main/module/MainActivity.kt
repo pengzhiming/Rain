@@ -1,5 +1,7 @@
 package com.zm.main.module
 
+import android.content.Context
+import android.content.Intent
 import android.os.Bundle
 import android.support.design.widget.TabLayout
 import android.support.v4.app.Fragment
@@ -8,7 +10,9 @@ import android.support.v7.app.AppCompatActivity
 import android.view.View
 import android.widget.ImageView
 import android.widget.TextView
+import com.alibaba.android.arouter.facade.annotation.Route
 import com.alibaba.android.arouter.launcher.ARouter
+import com.zm.common.router.RouterActivityPath
 import com.zm.common.router.RouterFragmentPath
 import com.zm.main.R
 import kotlinx.android.synthetic.main.activity_main.*
@@ -16,10 +20,18 @@ import kotlinx.android.synthetic.main.activity_main.*
 /**
  * Created by zm on 2018/12/25.
  */
+@Route(path = RouterActivityPath.Main.PAGER_MAIN)
 class MainActivity : AppCompatActivity(){
     private lateinit var mTabMenus: MutableList<TabMenu>
 
     class TabMenu(val title: String, val icon: Int, val fragment: Fragment)
+
+    companion object {
+        fun actionStart(context: Context) {
+            val intent = Intent(context, MainActivity::class.java)
+            context.startActivity(intent)
+        }
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

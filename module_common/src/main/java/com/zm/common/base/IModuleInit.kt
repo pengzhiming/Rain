@@ -7,7 +7,5 @@ import android.app.Application
  */
 interface IModuleInit {
     // 初始化优先的
-    fun onInitAhead(application: Application): Boolean
-    // 初始化靠后的
-    fun onInitLow(application: Application): Boolean
+    fun onInit(application: Application): Boolean
 }

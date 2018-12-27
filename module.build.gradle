@@ -5,6 +5,21 @@ if (isBuildModule.toBoolean()) {
     // 作为组件运行
     apply plugin: 'com.android.library'
 }
+apply plugin: 'kotlin-kapt'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+
+//阿里路由框架配置
+kapt {
+    arguments {
+        arg("AROUTER_MODULE_NAME", project.getName())
+    }
+}
+
+dependencies {
+    //组件中依赖阿里路由编译框架
+    kapt rootProject.ext.dependencies['arouter-compiler']
+}
 
 android {
     compileSdkVersion rootProject.ext.android.compileSdkVersion

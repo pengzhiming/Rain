@@ -1,24 +1,23 @@
-package com.zm.mall.debug
+package com.zm.home.debug
 
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
-import com.zm.mall.R
-import com.zm.mall.module.MallFragment
+import com.zm.home.R
+import com.zm.home.module.HomeFragment
 
 /**
  * Created by zm on 2018/12/25.
  */
-class DebugMallActivity : AppCompatActivity() {
+class DebugHomeActivity : AppCompatActivity(){
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_debug_mall)
+        setContentView(R.layout.activity_debug_home)
         setFragment()
     }
 
     // 设置Fragment
     private fun setFragment() {
         supportFragmentManager.beginTransaction()
-                .replace(R.id.fl_content, MallFragment.newInstance())
-                .commit()
+                .replace(R.id.fl_content, HomeFragment.newInstance()).commit()
     }
 }

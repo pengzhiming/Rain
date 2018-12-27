@@ -1,6 +1,5 @@
 apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
-apply plugin: 'kotlin-android-extensions'
 
 android {
     compileSdkVersion rootProject.ext.android.compileSdkVersion
@@ -37,7 +36,6 @@ dependencies {
     //kotlin 支持库
     api "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
     //公用的support相关库在base中依赖
-    api rootProject.ext.support['appcompatv7']
     api rootProject.ext.support['design']
     // 公用资源在base中依赖
     api project(':common_res')
