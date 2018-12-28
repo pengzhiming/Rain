@@ -18,7 +18,8 @@ ext {
             "retrofitSdkVersion"      : "2.3.0",
             "glideSdkVersion"         : "4.8.0",
             "rxJava"                  : "2.1.5",
-            "rxAndroid"               : "2.0.1"
+            "rxAndroid"               : "2.0.1",
+            "lifecycleSdkVersion"     : "1.1.1"
     ]
     //support配置
     support = [
@@ -45,5 +46,8 @@ ext {
             // 阿里路由框架
             "arouter-api"                 : "com.alibaba:arouter-api:1.4.1",
             "arouter-compiler"            : "com.alibaba:arouter-compiler:1.2.2",
+            // Google AAC (viewModel and liveData)
+            "lifecycle-extensions"        : "android.arch.lifecycle:extensions:$version.lifecycleSdkVersion",
+            "lifecycle-compiler"          : "android.arch.lifecycle:compiler:$version.lifecycleSdkVersion"
     ]
 }
