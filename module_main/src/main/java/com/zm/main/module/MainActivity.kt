@@ -22,7 +22,7 @@ import kotlinx.android.synthetic.main.activity_main.*
  */
 @Route(path = RouterActivityPath.Main.PAGER_MAIN)
 class MainActivity : AppCompatActivity(){
-    private lateinit var mTabMenus: MutableList<TabMenu>
+    private lateinit var mTabMenus: List<TabMenu>
 
     class TabMenu(val title: String, val icon: Int, val fragment: Fragment)
 

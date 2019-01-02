@@ -1,7 +1,7 @@
 package com.zm.rain
 
 import android.app.Application
-import com.zm.common.base.BaseModuleInit
+import com.zm.common.CommonModuleInit
 import com.zm.home.HomeModuleInit
 import com.zm.main.MainModuleInit
 import com.zm.mall.MallModuleInit
@@ -15,7 +15,7 @@ class RainApplication : Application() {
 
     override fun onCreate() {
         super.onCreate()
-        BaseModuleInit().onInit(this)
+        CommonModuleInit().onInit(this)
         MainModuleInit().onInit(this)
         HomeModuleInit().onInit(this)
         MallModuleInit().onInit(this)
