@@ -48,6 +48,8 @@ ext {
             "arouter-compiler"            : "com.alibaba:arouter-compiler:1.2.2",
             // Google AAC (viewModel and liveData)
             "lifecycle-extensions"        : "android.arch.lifecycle:extensions:$version.lifecycleSdkVersion",
-            "lifecycle-compiler"          : "android.arch.lifecycle:compiler:$version.lifecycleSdkVersion"
+            "lifecycle-compiler"          : "android.arch.lifecycle:compiler:$version.lifecycleSdkVersion",
+            // rxbinding
+            "rxbinding-kotlin"            : "com.jakewharton.rxbinding2:rxbinding-kotlin:2.1.1"
     ]
 }

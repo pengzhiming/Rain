@@ -29,6 +29,9 @@ android {
         }
     }
 
+    dataBinding {
+        enabled true
+    }
 }
 
 dependencies {
@@ -43,4 +46,5 @@ dependencies {
     api rootProject.ext.dependencies['arouter-api']
     // 谷歌AAC架构
     api rootProject.ext.dependencies['lifecycle-extensions']
+    api rootProject.ext.dependencies['rxbinding-kotlin']
 }

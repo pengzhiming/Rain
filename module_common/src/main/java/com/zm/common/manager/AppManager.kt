@@ -29,7 +29,7 @@ class AppManager private constructor(){
         if (activityStack == null) {
             activityStack = Stack()
         }
-        activityStack?.push(activity)
+        activityStack!!.push(activity)
     }
 
     /**
