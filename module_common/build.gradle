@@ -18,6 +18,11 @@ android {
         }
     }
 
+    compileOptions {
+        targetCompatibility JavaVersion.VERSION_1_7
+        sourceCompatibility JavaVersion.VERSION_1_7
+    }
+
     buildTypes {
         debug {
             minifyEnabled false
@@ -47,4 +52,7 @@ dependencies {
     // 谷歌AAC架构
     api rootProject.ext.dependencies['lifecycle-extensions']
     api rootProject.ext.dependencies['rxbinding-kotlin']
+    // rxlifecycle
+    api rootProject.ext.dependencies['rxlifecycle']
+    api rootProject.ext.dependencies['rxlifecycle-components']
 }

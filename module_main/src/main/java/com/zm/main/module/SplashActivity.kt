@@ -1,8 +1,8 @@
 package com.zm.main.module
 
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
+import android.support.v7.app.AppCompatActivity
 import com.zm.main.R
 
 /**
@@ -20,10 +20,9 @@ class SplashActivity : AppCompatActivity() {
 
     private fun jumpMain() {
         Handler().postDelayed({
-            if (isFinishing) {
-                finish()
-            }else {
+            if (!isFinishing) {
                 MainActivity.actionStart(baseContext)
+                finish()
             }
         }, 1500)
     }

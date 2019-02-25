@@ -37,6 +37,11 @@ android {
         versionName rootProject.ext.android.versionName
     }
 
+    compileOptions {
+        targetCompatibility JavaVersion.VERSION_1_7
+        sourceCompatibility JavaVersion.VERSION_1_7
+    }
+
     sourceSets {
         main {
             jniLibs.srcDirs = ['libs']

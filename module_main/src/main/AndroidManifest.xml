@@ -1,10 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.zm.main">
+          package="com.zm.main">
 
     <application>
+
         <!-- 主页 -->
-        <activity android:name=".module.MainActivity"
+        <activity
+            android:name=".module.MainActivity"
+            android:screenOrientation="portrait"/>
+        <!-- 登陆 -->
+        <activity
+            android:name=".module.login.LoginActivity"
             android:screenOrientation="portrait"/>
     </application>
+
 </manifest>

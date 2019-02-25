@@ -22,7 +22,7 @@ object ViewAdapter {
      */
     @SuppressLint("CheckResult")
     @BindingAdapter(value = ["onClickCommand", "isThrottleFirst"], requireAll = false)
-    fun onClickCommand(view: View, clickCommand: BindingCommand<Void>, isThrottleFirst: Boolean) {
+    fun onClickCommand(view: View, clickCommand: BindingCommand<View>, isThrottleFirst: Boolean) {
         if (isThrottleFirst) {
             RxView.clicks(view)
                     .subscribe {
@@ -42,7 +42,7 @@ object ViewAdapter {
      */
     @SuppressLint("CheckResult")
     @BindingAdapter(value = ["onLongClickCommand"], requireAll = false)
-    fun onLongClickCommand(view: View, clickCommand: BindingCommand<Void>) {
+    fun onLongClickCommand(view: View, clickCommand: BindingCommand<View>) {
         RxView.longClicks(view)
                 .subscribe{
                     clickCommand.execute()

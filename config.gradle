@@ -19,7 +19,8 @@ ext {
             "glideSdkVersion"         : "4.8.0",
             "rxJava"                  : "2.1.5",
             "rxAndroid"               : "2.0.1",
-            "lifecycleSdkVersion"     : "1.1.1"
+            "lifecycleSdkVersion"     : "1.1.1",
+            "rxlifecycle"             : "2.2.2",
     ]
     //support配置
     support = [
@@ -39,6 +40,9 @@ ext {
             // rxjava
             "rxjava"                      : "io.reactivex.rxjava2:rxjava:$version.rxJava",
             "rxandroid"                   : "io.reactivex.rxjava2:rxandroid:$version.rxAndroid",
+            // rx系列与view生命周期同步
+            "rxlifecycle"                 : "com.trello.rxlifecycle2:rxlifecycle:$version.rxlifecycle",
+            "rxlifecycle-components"      : "com.trello.rxlifecycle2:rxlifecycle-components:$version.rxlifecycle",
             // glide
             "glide"                       : "com.github.bumptech.glide:glide:$version.glideSdkVersion",
             "glide-okhttp"                : "com.github.bumptech.glide:okhttp3-integration:$version.glideSdkVersion",
@@ -50,6 +54,8 @@ ext {
             "lifecycle-extensions"        : "android.arch.lifecycle:extensions:$version.lifecycleSdkVersion",
             "lifecycle-compiler"          : "android.arch.lifecycle:compiler:$version.lifecycleSdkVersion",
             // rxbinding
-            "rxbinding-kotlin"            : "com.jakewharton.rxbinding2:rxbinding-kotlin:2.1.1"
+            "rxbinding-kotlin"            : "com.jakewharton.rxbinding2:rxbinding-kotlin:2.1.1",
+            // kotlin-reflect
+            "kotlin-reflect"              : "org.jetbrains.kotlin:kotlin-reflect:$kotlin_version"
     ]
 }

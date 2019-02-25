@@ -18,6 +18,8 @@ import com.zm.main.R
 import kotlinx.android.synthetic.main.activity_main.*
 
 /**
+ * 主页
+ * <p>
  * Created by zm on 2018/12/25.
  */
 @Route(path = RouterActivityPath.Main.PAGER_MAIN)

@@ -44,13 +44,13 @@ android {
     resourcePrefix "app_"
 
     compileOptions {
-        targetCompatibility JavaVersion.VERSION_1_8
-        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_7
+        sourceCompatibility JavaVersion.VERSION_1_7
     }
 
     configurations.all {
         //循环一个个的依赖库
-        resolutionStrategy.eachDependency { DependencyResolveDetails details ->
+        resolutionStrategy.eachDependency { details ->
             //获取当前循环到的依赖库
             def requested = details.requested
             //如果这个依赖库群组的名字是com.android.support
@@ -62,6 +62,10 @@ android {
                 }
             }
         }
+    }
+
+    dataBinding {
+        enabled true
     }
 }
 

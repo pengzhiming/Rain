@@ -9,8 +9,10 @@ class RouterActivityPath {
      */
     object Main{
         private const val MAIN: String = "/main"
-        /*首页*/
+        /*主页*/
         const val PAGER_MAIN: String = "$MAIN/Main"
+        /*登陆*/
+        const val PAGER_LOGIN: String = "$MAIN/Login"
     }
 
 }
