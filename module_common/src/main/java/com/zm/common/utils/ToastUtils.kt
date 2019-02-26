@@ -1,8 +1,11 @@
 package com.zm.common.utils
 
-import android.annotation.SuppressLint
-import android.widget.Toast
+import android.view.Gravity
+import android.view.View
+import android.widget.TextView
+import com.dovar.dtoast.DToast
 import com.zm.common.Common
+import com.zm.common.R
 
 /**
  * 吐司工具类
@@ -12,10 +15,28 @@ import com.zm.common.Common
  */
 object ToastUtils {
 
-    @SuppressLint("ShowToast")
-    fun showToast(message: String) {
+    fun show(message: String?) {
         Common.getApplication()?.let {
-            Toast.makeText(it, message, Toast.LENGTH_SHORT)
+            val toast = DToast.make(it)
+            val tvText = toast.view.findViewById<TextView>(R.id.tv_content)
+            tvText?.text = message
+            toast.setGravity(Gravity.BOTTOM or Gravity.CENTER, 0, 30).show()
         }
+    }
+
+    fun showAtCenter(message: String?) {
+        Common.getApplication()?.let {
+            val toastRoot = View.inflate(it, R.layout.layout_toast_center, null)
+            val tvText = toastRoot.findViewById<TextView>(R.id.tv_content)
+            tvText?.text = message
+            DToast.make(it).setView(toastRoot).setGravity(Gravity.CENTER, 0, 0).show()
+        }
+    }
+
+    /**
+     * 退出APP时调用
+     */
+    fun cancelAll() {
+        DToast.cancel()
     }
 }

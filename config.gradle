@@ -55,7 +55,7 @@ ext {
             "lifecycle-compiler"          : "android.arch.lifecycle:compiler:$version.lifecycleSdkVersion",
             // rxbinding
             "rxbinding-kotlin"            : "com.jakewharton.rxbinding2:rxbinding-kotlin:2.1.1",
-            // kotlin-reflect
-            "kotlin-reflect"              : "org.jetbrains.kotlin:kotlin-reflect:$kotlin_version"
+            // DToast https://github.com/Dovar66/DToast
+            "dtoast"                      : "com.github.Dovar66:DToast:1.1.3"
     ]
 }

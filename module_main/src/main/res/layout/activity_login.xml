@@ -2,7 +2,6 @@
 <layout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    xmlns:binding="http://schemas.android.com/apk/res-auto"
     tools:ignore="ResourceName">
     <data class="LoginBinding">
         <variable
@@ -68,6 +67,7 @@
             android:layout_marginTop="40dp"
             android:layout_marginLeft="16dp"
             android:layout_marginRight="16dp"
+            android:onClick="@{viewModel.loginClick}"
             android:text="@string/main_login"/>
     </LinearLayout>
 </layout>

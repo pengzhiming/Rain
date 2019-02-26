@@ -47,6 +47,7 @@ abstract class BaseActivity<V: ViewDataBinding, VM: BaseViewModel> : RxAppCompat
     /**
      * 注入绑定
      */
+    @Suppress("UNCHECKED_CAST")
     private fun initViewDataBinding(savedInstanceState: Bundle?) {
         //DataBindingUtil类需要在project的build中配置 dataBinding {enabled true }, 同步后会自动关联android.databinding包
         binding = DataBindingUtil.setContentView(this, initContentViewId(savedInstanceState))

@@ -9,8 +9,8 @@ apply plugin: 'kotlin-kapt'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 
-//阿里路由框架配置
 kapt {
+    //阿里路由框架配置
     arguments {
         arg("AROUTER_MODULE_NAME", project.getName())
     }
