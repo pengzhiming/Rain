@@ -5,8 +5,6 @@ import android.databinding.ObservableField
 import android.text.TextUtils
 import android.view.View
 import com.zm.common.base.BaseViewModel
-import com.zm.common.binding.command.BindingAction
-import com.zm.common.binding.command.BindingCommand
 import com.zm.common.utils.ToastUtils
 import io.reactivex.annotations.NonNull
 
@@ -18,13 +16,6 @@ class LoginViewModel(@NonNull application: Application) : BaseViewModel(applicat
     var userName: ObservableField<String> = ObservableField("")
     // 密码的绑定
     var password: ObservableField<String> = ObservableField("")
-
-    // 登录按钮的点击事件
-    var loginOnClickCommand: BindingCommand<Unit> = BindingCommand(object: BindingAction{
-        override fun call() {
-            login()
-        }
-    })
 
     // 登录按钮的点击事件
     var loginClick: View.OnClickListener = View.OnClickListener {

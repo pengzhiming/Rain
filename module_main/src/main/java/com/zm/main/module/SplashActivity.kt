@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.os.Handler
 import android.support.v7.app.AppCompatActivity
 import com.zm.main.R
+import com.zm.main.module.login.LoginActivity
 
 /**
  * 闪屏页
@@ -21,7 +22,7 @@ class SplashActivity : AppCompatActivity() {
     private fun jumpMain() {
         Handler().postDelayed({
             if (!isFinishing) {
-                MainActivity.actionStart(baseContext)
+                LoginActivity.actionStart(baseContext)
                 finish()
             }
         }, 1500)
